@@ -1,0 +1,44 @@
+/*Version Movil*/
+body{
+  font-family: "Dancing Script";
+  background: #02010A;
+  padding:0;
+  margin 0 auto;
+}
+
+/*Cabecera*/
+header{
+  background: #5B7989;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 1em, 2em;
+  color: white;
+}
+
+header h1{
+    text-align: center;
+    font-size: 3em;
+    text-shadow: 2px 2px 2px #02010A;
+    padding: 1em, 2em;
+}
+#menu ul{
+
+}
+
+#menu li{
+  list-style-type: none;
+  display: inline;
+  padding: 0 0.5em;
+}
+
+.menu{
+
+}
+/*Version para Moviles*/
+@media max-width:899px {
+
+}
