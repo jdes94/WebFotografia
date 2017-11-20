@@ -9,22 +9,35 @@
   </head>
   <body>
     <!-- Cabecera-->
-    <header id="Cabecera">
-      <h1>Comenzando con la Fotografia</h1>
+    <header id="cabecera">
+        <h1 name="Titulo Pag Principal">Comenzando con la Fotografia</h1>
       <!--Barra de navegación-->
-      <nav id="menu">
+      <navbar id="menu">
         <ul>
-          <li><a href="#" id="LinkInicio">Inicio</a></li>
-          <li><a href="#"id="LinkPaisajes">Paisajes</a></li>
-          <li><a href="#" id="LinkRetratos">Retratos</a></li>
+          <li><a href="index.html" id="LinkInicio">Inicio</a></li>
+          <li><a href="html/paisajes.html"id="LinkPaisajes">Paisajes</a></li>
+          <li><a href="html/retratos.html" id="LinkRetratos">Retratos</a></li>
         </ul>
-
-
-
-      </nav>
+      </navbar>
     </header>
     <div class="contenido">
-
+      <!--Sección Central-->
+      <section class="contImgCentral">
+        <figure>
+          <img src="img/Stars.jpeg" alt="Paisaje estrellado" name="Paisaje estrellado" id=ImgCentral>
+        </figure>
+      </section>
+      <!--Sección secundaria-->
+      <section class="contImgSecundarias">
+        <figure>
+          <img src="img/LakeSunset.jpg" alt="Atardecer en lago" name="Atardecer en lago" id="ImgSecund1">
+          <figcaption>Paisajes</figcaption>
+        </figure>
+        <figure>
+          <img src="img/GalGadot.jpg" alt="Palmeras" name="Palmeras" id="ImgSecund2">
+          <figcaption>Retratos</figcaption>
+        </figure>
+      </section>
     </div>
   </body>
 </html>

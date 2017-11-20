@@ -3,41 +3,104 @@ body{
   font-family: "Dancing Script";
   background: #02010A;
   padding:0;
-  margin 0 auto;
+  margin: 0 auto;
+  max-width: 900px;
+
 }
 
-/*Cabecera*/
-header{
-  background: #5B7989;
+/*******Cabecera********/
+#cabecera{
+  background: #5b7989;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -o-border-radius: 10px;
-  border-radius: 10px;
-  width: 100%;
-  padding: 1em, 2em;
+  width:100%;
+  margin: 0;
+  padding: 1em 1em;
   color: white;
+  display: inline-flex;
 }
-
-header h1{
-    text-align: center;
-    font-size: 3em;
+/*Titulo principal*/
+#cabecera h1{
+    float: left;
+    font-size: 2em;
     text-shadow: 2px 2px 2px #02010A;
-    padding: 1em, 2em;
+    margin:0 0.5em;
 }
+/********Menu******/
 #menu ul{
-
+  float: right;
 }
-
+/*enlaces*/
 #menu li{
   list-style-type: none;
-  display: inline;
   padding: 0 0.5em;
+  font-size: 1.4em;
+  display: inline-flex;
 }
 
-.menu{
-
+#menu a:link, #menu a:visited, #menu a:active{
+  color: white;
 }
+#menu a:hover, #menu a:active{
+  text-decoration:none;
+}
+/*****Contenido*****/
+
+img{
+  -webkit-filter: drop-shadow(2px #02010A);
+  -moz-filter: drop-shadow(2px #02010A);
+  -o-filter: drop-shadow(2px #02010A);
+  filter: drop-shadow(2px #02010A);
+}
+
+.contenido figure{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.contenido figcaption{
+  text-decoration: underline;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*Sección central*/
+.contImgCentral{
+  background: #82c3a6;
+  padding: 1.2em;
+}
+
+#ImgCentral{
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+}
+
+/*Sección secundaria*/
+.contImgSecundarias{
+  display:flex;
+  flex-flow: row nowrap;
+  background: #D5C75F;
+  padding: 1.2em;
+}
+
+#ImgSecund1{
+  display: block;
+  width: 83.5%;
+  margin: 0 auto;
+}
+
+#ImgSecund2{
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
 /*Version para Moviles*/
 @media max-width:899px {
 
