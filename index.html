@@ -3,41 +3,77 @@
   <head>
     <meta charset="utf-8">
     <meta name="viweport" content="width=device-width, user-scalable=no">
+    <meta name="author" content="Juan Escobar">
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" type="text/css">
     <title>Comenzando con la fotografia</title>
   </head>
   <body>
-    <!-- Cabecera-->
-    <header id="cabecera">
-        <h1 name="Titulo Pag Principal">Comenzando con la Fotografia</h1>
-      <!--Barra de navegación-->
-      <navbar id="menu">
-        <ul>
-          <li><a href="index.html" id="LinkInicio">Inicio</a></li>
-          <li><a href="html/paisajes.html"id="LinkPaisajes">Paisajes</a></li>
-          <li><a href="html/retratos.html" id="LinkRetratos">Retratos</a></li>
-        </ul>
-      </navbar>
-    </header>
     <div class="contenido">
+      <!-- Cabecera-->
+      <header>
+        <div class="cabecera">
+          <div id="tituloPrincipal">
+              <h1 name="Titulo Pag Principal">Comenzando con la Fotografia</h1>
+          </div>
+          <!--Barra de navegación-->
+          <div id="menu">
+            <nav >
+              <ul>
+                <li><a href="index.html" id="LinkInicio">Inicio</a></li>
+                <li><a href="html/paisajes.html" id="LinkPaisajes">Paisajes</a></li>
+                <li><a href="html/retratos.html" id="LinkRetratos">Retratos</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
       <!--Sección Central-->
       <section class="contImgCentral">
         <figure>
-          <img src="img/Stars.jpeg" alt="Paisaje estrellado" name="Paisaje estrellado" id=ImgCentral>
+          <img src="img/Stars.jpeg" alt="Paisaje estrellado" name="Paisaje estrellado" id=imgCentral>
         </figure>
       </section>
       <!--Sección secundaria-->
       <section class="contImgSecundarias">
+        <!--Imagen Secundaria 1-->
         <figure>
-          <img src="img/LakeSunset.jpg" alt="Atardecer en lago" name="Atardecer en lago" id="ImgSecund1">
+          <img src="img/LakeSunset.jpg" alt="Atardecer en lago" name="Atardecer en lago" id="imgSecund1">
           <figcaption>Paisajes</figcaption>
         </figure>
+        <!--Imagen Secundaria 2-->
         <figure>
-          <img src="img/GalGadot.jpg" alt="Palmeras" name="Palmeras" id="ImgSecund2">
+          <img src="img/GalGadot.jpg" alt="Palmeras" name="Palmeras" id="imgSecund2">
           <figcaption>Retratos</figcaption>
         </figure>
       </section>
+      <footer>
+        <div class="contacto">
+          <h2>Contacto</h2>
+          <a href="mailto:jdes94@gmail.com">jdes94@gmail.com</a>
+          <p>Calle 38B Sur #26-02<br>Medellín, Colombia<br>Telf: +57 (305) 294 6969</p>
+        </div>
+        <div class="terminos">
+            <h2>Términos</h2>
+            <p>Infórmate acerca de nuestras políticas y condiciones</p>
+        </div>
+        <div class="redesSociales">
+          <h2>Redes Sociales</h2>
+          <p>
+            Conoce nuestras redes sociales
+            <br>
+            <img src="img/LogoIG.jpg" alt=" logo ig" name="Logo ig"> @ComenzandoFotografia
+            <br>
+            <img src="img/LogoFB.png" alt=" logo fb " name="Logo fb"> Comenzando con la Fotografia
+            <br>
+            <img src="img/LogoTW.png" alt=" logo tw" name="Logo tw">@ComenzandoFotografia
+          </p>
+        </div>
+        <div class="derechos">
+          <h2>Derechos</h2>
+          <p>Derechos Reservados<br>Juan Escobar© 2017</p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

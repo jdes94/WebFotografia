@@ -1,69 +1,136 @@
-/*Version Movil*/
+/******Versión Desktop*****/
+
+/*General*/
 body{
   font-family: "Dancing Script";
   background: #02010A;
   padding:0;
   margin: 0 auto;
-  max-width: 900px;
-
+  width: 70%;
 }
 
-/*******Cabecera********/
-#cabecera{
-  background: #5b7989;
+.contenido{
+  margin: 0;
+  padding: 0;
+  width: 100%;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -o-border-radius: 10px;
+  overflow: hidden;
+}
+
+/*******Cabecera********/
+.cabecera{
+  background: #5b7989;
   width:100%;
   margin: 0;
-  padding: 1em 1em;
+  padding: 1% 1%;
   color: white;
-  display: inline-flex;
+  display: flex;
+  flex-flow: row wrap;
+  animation: animacionCabecera 1.5s;
+}
+/*Animación cabecera*/
+@keyframes animacionCabecera{
+  0%{
+    margin-top: 150%;
+  }
+
+  60%{
+    margin-top: -5%;
+  }
+
+  100%{
+    margin-top: 0%;
+  }
+}
+@-webkit-keyframes animacionCabecera{
+  0%{
+    margin-top: 150%;
+  }
+
+  60%{
+    margin-top: -5%;
+  }
+
+  100%{
+    margin-top: 0%;
+  }
+}
+
+@-moz-keyframes animacionCabecera{
+  0%{
+    margin-top: 150%;
+  }
+
+  60%{
+    margin-top: -5%;
+  }
+
+  100%{
+    margin-top: 0%;
+  }
+}
+@-o-keyframes animacionCabecera{
+  0%{
+    margin-top: 150%;
+  }
+
+  60%{
+    margin-top: -5%;
+  }
+
+  100%{
+    margin-top: 0%;
+  }
 }
 /*Titulo principal*/
-#cabecera h1{
+.cabecera #tituloPrincipal{
     float: left;
-    font-size: 2em;
+    font-size: 1.2em;
     text-shadow: 2px 2px 2px #02010A;
-    margin:0 0.5em;
+    margin:0 2%;
+    width:55%;
 }
 /********Menu******/
-#menu ul{
+#menu{
+  padding: 0;
+  margin: 0;
   float: right;
 }
 /*enlaces*/
 #menu li{
   list-style-type: none;
-  padding: 0 0.5em;
-  font-size: 1.4em;
-  display: inline-flex;
+  padding: 0.7em 0.5em;
+  font-size: 1.7em;
+  display: inline-block;
 }
 
 #menu a:link, #menu a:visited, #menu a:active{
   color: white;
 }
-#menu a:hover, #menu a:active{
+#menu a:hover, #menu a:visited{
   text-decoration:none;
 }
-/*****Contenido*****/
+/*****Sección Imagenes*****/
 
 img{
-  -webkit-filter: drop-shadow(2px #02010A);
-  -moz-filter: drop-shadow(2px #02010A);
-  -o-filter: drop-shadow(2px #02010A);
-  filter: drop-shadow(2px #02010A);
+  -webkit-filter: drop-shadow(2px 2px#02010A);
+  -moz-filter: drop-shadow(2px 2px #02010A);
+  -o-filter: drop-shadow(2px 2px #02010A);
+  filter: drop-shadow(2px 2px #02010A);
 }
 
-.contenido figure{
+figure{
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
-.contenido figcaption{
+figcaption{
   text-decoration: underline;
-  font-size: 1.3em;
+  font-size: 1.7em;
   font-weight: bold;
   text-align: center;
 }
@@ -71,10 +138,10 @@ img{
 /*Sección central*/
 .contImgCentral{
   background: #82c3a6;
-  padding: 1.2em;
+  padding: 2%;
 }
-
-#ImgCentral{
+/*Imagen index*/
+#imgCentral{
   width: 95%;
   display: block;
   margin: 0 auto;
@@ -85,23 +152,52 @@ img{
   display:flex;
   flex-flow: row nowrap;
   background: #D5C75F;
-  padding: 1.2em;
+  padding: 2%;
 }
-
-#ImgSecund1{
+/*Imagen secundaria index 1 y 2*/
+#imgSecund1, #imgSecund2{
   display: block;
-  width: 83.5%;
+  width: 88%;
   margin: 0 auto;
 }
 
-#ImgSecund2{
-  display: block;
-  width: 90%;
-  margin: 0 auto;
+.ImgSecund1:hover{
+  transform: rotate(10deg);
+  filter: drop-shadow(2px 2px 2px #82C3A6);
 }
 
+.ImgSecund2:hover{
+  transform: translate(20px, -5px);
+  filter: drop-shadow(2px 2px #82C3A6);
+}
+/******Pie de Página*******/
+footer{
+  background: #C6D5C5;
+  width: 100%;
+  margin:0;
+  padding: 2%;
+  display: flex;
+  flex-flow: row nowrap;
+}
 
-/*Version para Moviles*/
+footer h2{
+  font-size: 1.7em;
+}
+/*contacto, términos, redes y derechos*/
+.contacto, .terminos, .redesSociales, .derechos{
+  margin: 0 1.5%;
+  padding: 0;
+  width: 22%;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+
+.redesSociales img{
+  width: 7%;
+}
+
+/*****Versión móvil*******/
 @media max-width:899px {
 
 }
