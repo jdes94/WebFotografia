@@ -6,31 +6,30 @@ body{
   background: #02010A;
   padding:0;
   margin: 0 auto;
-  width: 70%;
+  width: 80%;
 }
 
 .contenido{
   margin: 0;
   padding: 0;
   width: 100%;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -o-border-radius: 10px;
-  overflow: hidden;
+}
+/*******Cabecera********/
+header{
+  width: 100%;
+  margin:0;
+  padding:0;
+  color: white;
+  background: #5b7989;
+  border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+  animation: animacionCabecera 1.5s;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
-/*******Cabecera********/
-.cabecera{
-  background: #5b7989;
-  width:100%;
-  margin: 0;
-  padding: 1% 1%;
-  color: white;
-  display: flex;
-  flex-flow: row wrap;
-  animation: animacionCabecera 1.5s;
-}
 /*Animación cabecera*/
 @keyframes animacionCabecera{
   0%{
@@ -86,35 +85,41 @@ body{
   }
 }
 /*Titulo principal*/
-.cabecera #tituloPrincipal{
-    float: left;
-    font-size: 1.2em;
-    text-shadow: 2px 2px 2px #02010A;
-    margin:0 2%;
-    width:55%;
+header h1{
+  padding: 0 2%;
+  font-size: 2.3em;
+  text-shadow: 2px 2px black;
+  text-align: left;
+  display: inline;
+  width:50%;
 }
-/********Menu******/
-#menu{
-  padding: 0;
-  margin: 0;
-  float: right;
+/*Menu*/
+.menu{
+  width: 50%;
+  text-align: right;
+}
+header ul{
+  display: block;
+  padding-top:5%;
+}
+
+header li{
+  display: inline;
+  list-style-type: none;
+  padding: 0 4%;
+  font-size: 1.6em;
 }
 /*enlaces*/
-#menu li{
-  list-style-type: none;
-  padding: 0.7em 0.5em;
-  font-size: 1.7em;
-  display: inline-block;
-}
-
-#menu a:link, #menu a:visited, #menu a:active{
+.menu a:link, .menu a:visited{
   color: white;
 }
-#menu a:hover, #menu a:visited{
+.menu a:hover{
   text-decoration:none;
 }
+.linkMenu{
+  text-decoration: none;
+}
 /*****Sección Imagenes*****/
-
 img{
   -webkit-filter: drop-shadow(2px 2px#02010A);
   -moz-filter: drop-shadow(2px 2px #02010A);
@@ -135,47 +140,77 @@ figcaption{
   text-align: center;
 }
 
-/*Sección central*/
-.contImgCentral{
+/*Sección central index*/
+#contImgCentral{
   background: #82c3a6;
-  padding: 2%;
+  padding: 2% 0;
+  display: block;
+  width: 100%;
 }
-/*Imagen index*/
-#imgCentral{
-  width: 95%;
+
+#imgCentral img{
+  width: 92%;
   display: block;
   margin: 0 auto;
 }
-
-/*Sección secundaria*/
-.contImgSecundarias{
+/*Sección secundaria index*/
+#contImgSecundarias{
   display:flex;
   flex-flow: row nowrap;
   background: #D5C75F;
-  padding: 2%;
+  padding: 2% 0%;
+  width: 100%;
 }
-/*Imagen secundaria index 1 y 2*/
-#imgSecund1, #imgSecund2{
+
+#contImgSecundarias img{
+  width: 85%;
   display: block;
-  width: 88%;
   margin: 0 auto;
 }
 
-.ImgSecund1:hover{
+#imgSecund1:hover{
   transform: rotate(10deg);
   filter: drop-shadow(2px 2px 2px #82C3A6);
 }
 
-.ImgSecund2:hover{
+#imgSecund2:hover{
   transform: translate(20px, -5px);
   filter: drop-shadow(2px 2px #82C3A6);
 }
+/*Sección imagenes paisajes y retratos*/
+.contImgEfectos{
+  width: auto;
+  background: #D5C75F;
+  padding: 2% 0;
+  padding-left: 3%
+}
+
+.contImgEfectos figure{
+  display: inline;
+}
+.contImgEfectos img{
+  width: 28%;
+  padding: 2% 2%;
+}
+
+.imgEfectos1{
+  filter: blur(10px);
+}
+
+.imgEfectos2, .imgEfectos4, .imgEfectos6{
+  filter: grayscale(100%);
+}
+
+.imgEfectos3{
+  filter: sepia(90%);
+}
+
 /******Pie de Página*******/
 footer{
   background: #C6D5C5;
   width: 100%;
   margin:0;
-  padding: 2%;
+  padding:0;
   display: flex;
   flex-flow: row nowrap;
 }
@@ -185,8 +220,8 @@ footer h2{
 }
 /*contacto, términos, redes y derechos*/
 .contacto, .terminos, .redesSociales, .derechos{
-  margin: 0 1.5%;
-  padding: 0;
+  margin:3% 4%;
+  padding:0;
   width: 22%;
   font-size: 1.3em;
   font-weight: bold;
@@ -198,6 +233,63 @@ footer h2{
 }
 
 /*****Versión móvil*******/
-@media max-width:899px {
+@media (max-width:899px){
+  /*****Cabecera******/
+  header{
+    flex-flow: row wrap;
+  }
 
-}
+  header h1{
+    width: 100%;
+    text-align: center;
+  }
+  /*Menu*/
+  .menu{
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu ul{
+    padding-top: 0;
+    padding-right: 10%;
+  }
+  /*****Sección Imagenes*****/
+
+  /*Seccion Central index*/
+  #contImgCentral{
+    padding: 4% 0;
+  }
+
+  /*Sección Secundaria index*/
+  #contImgSecundarias{
+    display: block;
+  }
+  #imgSecund1 img, #imgSecund2 img{
+    width: 90%;
+    padding: 4% 0
+  }
+
+  /*Sección Imagenes Paisajes y Retratos*/
+  .contImgEfectos{
+    padding: 2% 0;
+  }
+
+  .contImgEfectos figure{
+    display: block;
+  }
+
+  .contImgEfectos img{
+    display: block;
+    margin: 3% auto;
+    width: 90%;
+  }
+/*****Pie de Página*****/
+  footer{
+    display:block;
+    padding: 4% 0;
+  }
+  .contacto, .terminos, .redesSociales, .derechos{
+    width:100%;
+    text-align: left;
+    margin-left: 10%;
+  }
